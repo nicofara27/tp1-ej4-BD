@@ -24,4 +24,4 @@ app.use(morgan('dev'));
 
 app.use(express.static(path.join(__dirname, '../public')))
 
-app.use('/apitareas', tareaRouter)
+app.use('/apitarea', tareaRouter)
