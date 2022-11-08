@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { borrarTarea, crearTarea, listarTareas } from "../controllers/tarea.controllers";
+import { borrarTarea, crearTarea, editarTarea, listarTareas, obtenerTarea } from "../controllers/tarea.controllers";
 import { check } from "express-validator";
 
 const router = Router();
@@ -12,6 +12,8 @@ router
 ],crearTarea);
 
 router.route("/tareas/:id")
+.get(obtenerTarea)
+.put(editarTarea)
 .delete(borrarTarea);
 
 export default router;
